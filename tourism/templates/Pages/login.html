@@ -1,0 +1,54 @@
+{% extends 'Pages/layout.html' %}
+{% block title %}
+    Du lich
+{% endblock %}
+{% block contents %}
+    {% load static %}
+    <section class="hero-wrap hero-wrap-2 js-fullheight"
+             style="background-image: url('{% static 'images/bg_1.jpg' %}');">
+    <div class="overlay"></div>
+        <div class="ftco-section ">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-5">
+                        <h2 class="heading-section"></h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="login-wrap p-0">
+                            <h3 class="mb-4 text-center" style="color: whitesmoke">Nhập tài khoản của bạn</h3>
+                            <form action="{% url "login_view" %}" method="POST" class="signin-form">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <input type="text" name="username" class="form-control" placeholder="Tên đăng nhập"
+                                           required>
+                                </div>
+                                <div class="form-group">
+                                    <input id="password-field" name="password" type="password" class="form-control"
+                                           placeholder="Mật khẩu"
+                                           required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="form-control btn btn-primary submit px-3"
+                                           value="Đăng nhập">
+                                </div>
+                            </form>
+                            <div style="margin-left: 1%">
+                                <p class="w-100 text-center" style="color: white">&mdash; Quên mật khẩu và tạo tài khoản
+                                    &mdash;</p>
+                                <div class="container row social d-flex text-center">
+                                    <a href="#" class="col px-2 py-2 mr-md-1 rounded bg-light">
+                                        Quên mật khẩu?</a>
+                                    <a href="{% url "register_user" %}" class="col px-2 py-2 ml-md-1 rounded bg-light ">
+                                        Tạo tài khoản</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

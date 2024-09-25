@@ -1,0 +1,310 @@
+{% extends 'Pages/layout.html' %}
+{% block title %}
+    Du lich
+{% endblock %}
+{% block contents %}
+    {% load static %}
+
+    <section class="hero-wrap hero-wrap-2 js-fullheight"
+             style="background-image: url('{% static 'images/bg_1.jpg' %}');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Trang chủ <i
+                            class="fa fa-chevron-right"></i></a></span> <span>Về chúng tôi <i
+                            class="fa fa-chevron-right"></i></span></p>
+                    <h1 class="mb-0 bread">Về chúng tôi</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section services-section">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate d-flex align-items-center">
+                    <div class="w-100">
+                        <span class="subheading">Chào mừng đến với Du lịch Đó đây</span>
+                        <h2 class="mb-4">Đã đến lúc bắt đầu cuộc hành trình của bạn</h2>
+                        <p>Biển Đà Nẵng, với vẻ đẹp hoang sơ và cuốn hút, luôn là điểm đến lý tưởng cho những người yêu
+                            thích du lịch biển. Vùng biển này nằm giữa những dãy núi đá vôi đổ bộ xuống biển, tạo nên
+                            khung cảnh hùng vĩ và độc đáo. Những bãi biển trải dài, với cát trắng mịn và nước biển trong
+                            xanh, thu hút du khách đến đây để thả mình trong làn nước biển mát lạnh.</p>
+                        <p>Không chỉ có cảnh đẹp tự nhiên, Đà Nẵng còn có nhiều điểm du lịch thú vị khác như Cầu Rồng
+                            lung linh về đêm, Bà Nà Hills với khí hậu mát mẻ và các công trình kiến trúc độc đáo, hay
+                            Khu du lịch Sơn Trà với ngọn núi cao và lớp rừng nhiệt đới nguyên sơ.</p>
+                        <p><a href="#" class="btn btn-primary py-3 px-4">Tìm kiếm Điểm đến</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+                            <div class="services services-1 color-1 d-block img"
+                                 style="background-image: url({% static 'images/services-1.jpg' %});">
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="flaticon-paragliding"></span></div>
+                                <div class="media-body">
+                                    <h3 class="heading mb-3">Những hoạt động</h3>
+                                    <p>tham quan, thưởng thức ẩm thực địa phương, thể thao, mua sắm và tận hưởng văn hóa
+                                        địa phương</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+                            <div class="services services-1 color-2 d-block img"
+                                 style="background-image: url({% static 'images/services-2.jpg' %});">
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="flaticon-route"></span></div>
+                                <div class="media-body">
+                                    <h3 class="heading mb-3">Sắp xếp chuyến đi</h3>
+                                    <p>tổ chức và điều phối các địa điểm và tiện ích cho chương trình du lịch</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+                            <div class="services services-1 color-3 d-block img"
+                                 style="background-image: url({% static 'images/services-3.jpg' %});">
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="flaticon-tour-guide"></span></div>
+                                <div class="media-body">
+                                    <h3 class="heading mb-3">Hướng dẫn viên tư nhân</h3>
+                                    <p>người bạn đồng hành tận tâm mang đến trải nghiệm du lịch cá nhân hóa và độc
+                                        đáo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+                            <div class="services services-1 color-4 d-block img"
+                                 style="background-image: url({% static 'images/services-4.jpg' %});">
+                                <div class="icon d-flex align-items-center justify-content-center"><span
+                                        class="flaticon-map"></span></div>
+                                <div class="media-body">
+                                    <h3 class="heading mb-3">Quản lý địa diểm du lịch</h3>
+                                    <p>là chuyên gia xác định và điều phối các địa điểm và vị trí trong các chương trình
+                                        du lịch</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="ftco-section ftco-about img" style="background-image: url({% static 'images/bg_4.jpg' %});">
+        <div class="overlay"></div>
+        <div class="container py-md-5">
+            <div class="row py-md-5">
+                <div class="col-md d-flex align-items-center justify-content-center">
+                    <a href="https://vimeo.com/45830194"
+                       class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
+                        <span class="fa fa-play"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-about ftco-no-pt img">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-12 about-intro">
+                    <div class="row">
+                        <div class="col-md-6 d-flex align-items-stretch">
+                            <div class="img d-flex w-100 align-items-center justify-content-center"
+                                 style="background-image:url({% static 'images/about-1.jpg' %});">
+                            </div>
+                        </div>
+                        <div class="col-md-6 pl-md-5 py-5">
+                            <div class="row justify-content-start pb-3">
+                                <div class="col-md-12 heading-section ftco-animate">
+                                    <span class="subheading">Về chúng tôi</span>
+                                    <h2 class="mb-4">Làm cho chuyến đi của bạn trở lên đáng nhớ và an toàn cùng chúng
+                                        tôi</h2>
+                                    <p>Đây là nơi bạn có thể khám phá tâm hồn và đam mê của đội ngũ chúng tôi, cũng như
+                                        cam kết của chúng tôi về việc mang đến cho du khách những chuyến đi đặc
+                                        biệt.</p>
+                                    <p><a href="#" class="btn btn-primary">Đặt Tour của bạn</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section testimony-section bg-bottom" style="background-image: url({% static 'images/bg_1.jpg' %});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center pb-4">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <span class="subheading">Lời chứng thực</span>
+                    <h2 class="mb-4">Đóng góp của du khách</h2>
+                </div>
+            </div>
+            <div class="row ftco-animate">
+                <div class="col-md-12">
+                    <div class="carousel-testimony owl-carousel">
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <p class="star">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </p>
+                                    <p class="mb-4">Chuyến du lịch này thật tuyệt vời! Tôi đã có cơ hội khám phá những
+                                        địa điểm tuyệt đẹp và tìm hiểu văn hóa địa phương.</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url({% static 'images/person_1.jpg' %})"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Cao Thế Đô</p>
+                                            <span class="position">Nhân vật 1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <p class="star">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </p>
+                                    <p class="mb-4">Dịch vụ và hướng dẫn viên rất xuất sắc, mang lại cho chúng tôi một
+                                        kỳ nghỉ đáng nhớ và thú vị. Nhất định sẽ quay trở lại!</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url({%  static 'images/person_2.jpg' %})"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Phong PC</p>
+                                            <span class="position">Nhân Vật 2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <p class="star">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </p>
+                                    <p class="mb-4">Dịch vụ và hướng dẫn viên rất xuất sắc, mang lại cho chúng tôi một
+                                        kỳ nghỉ đáng nhớ và thú vị. Nhất định sẽ quay trở lại!</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url({%  static 'images/person_3.jpg' %})"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Yang teacher </p>
+                                            <span class="position">Giảng viên</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-intro ftco-section ftco-no-pt">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <div class="img" style="background-image: url({% static 'images/bg_2.jpg' %});">
+                        <div class="overlay"></div>
+                        <h2>Chúng tôi là du lịch đó đây</h2>
+                        <p>Chúng tôi có thể giúp bạn đặt chân đến được những địa điểm trong mơ của mình với sự chu đáo
+                            và nhiệt huyết nhất</p>
+                        <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Liên hệ ngay để được tư vấn</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer bg-bottom ftco-no-pt" style="background-image: url({% static 'images/bg_3.jpg' %});">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md pt-5">
+                    <div class="ftco-footer-widget pt-md-5 mb-4">
+                        <h2 class="ftco-heading-2">Về chúng tôi</h2>
+                        <p>Đây là nơi bạn có thể khám phá tâm hồn và đam mê của đội ngũ chúng tôi, cũng như cam kết của
+                            chúng tôi về việc mang đến cho du khách những chuyến đi đặc biệt.</p>
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
+                            <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md pt-5 border-left">
+                    <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Thông tin</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Yêu cầu trực tuyến</a></li>
+                            <li><a href="#" class="py-2 d-block">Những câu hỏi chung</a></li>
+                            <li><a href="#" class="py-2 d-block">Điều khoản đặt tour</a></li>
+                            <li><a href="#" class="py-2 d-block">Chính sách an toàn và bảo mật</a></li>
+                            <li><a href="#" class="py-2 d-block">Chính sách hoàn tiền</a></li>
+                            <li><a href="#" class="py-2 d-block">Liên hệ chúng tôi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md pt-5 border-left">
+                    <div class="ftco-footer-widget pt-md-5 mb-4">
+                        <h2 class="ftco-heading-2">Trải nghiệm</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="py-2 d-block">Hành trình</a></li>
+                            <li><a href="#" class="py-2 d-block">Khách sạn và nhà hàng</a></li>
+                            <li><a href="#" class="py-2 d-block">Bãi biển</a></li>
+                            <li><a href="#" class="py-2 d-block">Thiên nhiên</a></li>
+                            <li><a href="#" class="py-2 d-block">Cắm trại</a></li>
+                            <li><a href="#" class="py-2 d-block">Sự kiện và những bữa tiệc</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md pt-5 border-left">
+                    <div class="ftco-footer-widget pt-md-5 mb-4">
+                        <h2 class="ftco-heading-2">Nếu bạn có bất kỳ câu hỏi nào?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon fa fa-map-marker"></span><span class="text">41A Đ. Phú Diễn, Phú Diễn, Bắc Từ Liêm, Hà Nội, Việt Nam</span>
+                                </li>
+                                <li><a href="#"><span class="icon fa fa-phone"></span><span
+                                        class="text">0372133179</span></a></li>
+                                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">phamnghia1605@gmail.com</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        Trang Web được thực hiện và hoàn thiện bởi Nhóm 3 <i class="fa fa-heart" aria-hidden="true"></i>
+                        - ĐH11C1
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}

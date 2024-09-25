@@ -1,0 +1,157 @@
+{% extends 'Pages/layout.html' %}
+{% block title %}
+    Du lich
+{% endblock %}
+{% block contents %}
+    {% load static %}
+
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url({% static 'images/bg_1.jpg' %});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Trang chủ <i
+                            class="fa fa-chevron-right"></i></a></span> <span>Danh sách Tour <i
+                            class="fa fa-chevron-right"></i></span></p>
+                    <h1 class="mb-0 bread">Danh sách Tour</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="search-wrap-1 ftco-animate">
+                        <form action="#" class="search-property-1">
+                            <div class="row no-gutters">
+                                <div class="col-lg d-flex">
+                                    <div class="form-group p-4 border-0">
+                                        <label for="#">Điểm đến</label>
+                                        <div class="form-field">
+                                            <div class="icon"><span class="fa fa-search"></span></div>
+                                            <label>
+                                                <input type="text" class="form-control" placeholder="Tìm kiếm địa điểm">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg d-flex">
+                                    <div class="form-group p-4">
+                                        <label for="#">ngày đi -> js lấy ngày hiện tại</label>
+                                        <div class="form-field">
+                                            <div class="icon"><span class="fa fa-calendar"></span></div>
+                                            <label>
+                                                <input type="text" class="form-control checkin_date"
+                                                       placeholder="Ngày Check-In">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg d-flex">
+                                    <div class="form-group p-4">
+                                        <label for="#">Thời gian Check-out</label>
+                                        <div class="form-field">
+{#                                            <div class="icon"><span class="fa fa-calendar"></span></div>#}
+                                            <label>
+                                                <input type="text" class="form-control"
+                                                       placeholder="Số ngày">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg d-flex">
+                                    <div class="form-group p-4">
+                                        <label for="#">Giới hạn Giá</label>
+                                        <div class="form-field">
+                                            <div class="select-wrap">
+                                                <div class="icon"><span class="fa fa-chevron-down"></span></div>
+                                                <label for=""></label><select name="" id="" class="form-control">
+                                                <option value="">1,000,000 VNĐ</option>
+                                                <option value="">1,500,000 VNĐ</option>
+                                                <option value="">2,000,000 VNĐ</option>
+                                                <option value="">2,500,000 VNĐ</option>
+                                                <option value="">3,500,000 VNĐ</option>
+                                                <option value="">4,500,000 VNĐ</option>
+                                                <option value="">5,000,000 VNĐ</option>
+                                                <option value="">5,500,000 VNĐ</option>
+                                                <option value="">6,000,000 VNĐ</option>
+                                                <option value="">Số tiền khác</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg d-flex">
+                                    <div class="form-group d-flex w-100 border-0">
+                                        <div class="form-field w-100 align-items-center d-flex">
+                                            <input type="submit" value="Tìm kiếm"
+                                                   class="align-self-stretch form-control btn btn-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                  {% for x in destination %}
+                <div class="col-md-4 ftco-animate">
+                    <div class="project-wrap">
+                        <a href="{% url 'dSingle' x.id %}" class="img" style="background-image: url({{ x.avatar.url }});">
+                            <span class="price">{{ x.price }}tr VNĐ/Người</span>
+                        </a>
+                        <div class="text p-4">
+                            <span class="days">8 Ngày</span>
+                            <h3><a href="#" class="d-inline-block text-truncate w-100">{{ x.name }}</a></h3>
+                            <p class="location"><span class="fa fa-map-marker"></span>{{ x.tourCode }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+{#            <div class="row mt-5">#}
+{#                <div class="col text-center">#}
+{#                    <div class="block-27">#}
+{#                        <ul>#}
+{#                            <li><a href="#">&lt;</a></li>#}
+{#                            <li class="active"><span>1</span></li>#}
+{#                            <li><a href="#">2</a></li>#}
+{#                            <li><a href="#">3</a></li>#}
+{#                            <li><a href="#">4</a></li>#}
+{#                            <li><a href="#">5</a></li>#}
+{#                            <li><a href="#">&gt;</a></li>#}
+{#                        </ul>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+        </div>
+    </section>
+
+
+
+    <section class="ftco-intro ftco-section ftco-no-pt">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <div class="img" style="background-image: url({% static 'images/bg_2.jpg' %});">
+                        <div class="overlay"></div>
+                        <h2>Chúng tôi là du lịch đó đây</h2>
+                        <p>Chúng tôi có thể giúp bạn đặt chân đến được những địa điểm trong mơ của mình với sự chu đáo
+                            và nhiệt huyết nhất</p>
+                        <p class="mb-0"><a href="#" class="btn btn-primary px-4 py-3">Liên hệ ngay để được tư vấn</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

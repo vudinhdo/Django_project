@@ -1,0 +1,122 @@
+{% extends 'Pages/layout.html' %}
+{% block title %}
+    Du lich
+{% endblock %}
+{% block contents %}
+    {% load static %}
+
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url({% static 'images/bg_1.jpg' %});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+                <div class="col-md-9 ftco-animate pb-5 text-center">
+                    <h1 class="mb-0 bread">Blog Details</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+            <div class="row">
+                <div class=" ftco-animate py-md-5 mt-md-5">
+                    <h2 class="mb-3">{{ blog.name }}</h2>
+                    <p>{{ blog.description }}</p>
+                    <p>
+                        <img src="{{ blog.firstImage.url }}" alt="" class="img-fluid w- 75">
+                    </p>
+                    <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat
+                        sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem
+                        soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet
+                        fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
+                    <h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
+                    <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in.
+                        Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque.
+                        Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos
+                        odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
+                    <p>
+                        <img src="{{ blog.secondImage.url }}" alt="" class="img-fluid w-75">
+                    </p>
+                    <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo
+                        quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis
+                        vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint.
+                        Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
+                    <div class="tag-widget post-tag-container mb-5 mt-5">
+                        <div class="tagcloud">
+                            <a href="#" class="tag-cloud-link">Life</a>
+                            <a href="#" class="tag-cloud-link">Sport</a>
+                            <a href="#" class="tag-cloud-link">Tech</a>
+                            <a href="#" class="tag-cloud-link">Travel</a>
+                        </div>
+                    </div>
+                    {#nguoi tao bai viet#}
+                    {#                    <div class="about-author d-flex p-4 bg-light">#}
+                    {#                        <div class="bio mr-5">#}
+                    {#                            <img src="{% static 'images/person_1.jpg' %}" alt="Image placeholder"#}
+                    {#                                 class="img-fluid mb-4">#}
+                    {#                        </div>#}
+                    {#                        <div class="desc">#}
+                    {#                            <h3>George Washington</h3>#}
+                    {#                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem#}
+                    {#                                necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa#}
+                    {#                                sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+
+                    {#comment#}
+                    <div class="pt-5 mt-5">
+                        {% if not blog.comments.all %}
+                            <h3 class="mb-5" style="font-size: 20px; font-weight: bold;">0 Comments</h3>
+                        {% else %}
+                            {% for cmt in blog.comments.all %}
+                                <ul class="comment-list">
+                                    <li class="comment">
+                                        <div class="vcard bio">
+                                            <img src="{% static "images/profiles/avatar.jpg" %}" class="w-100"
+                                                 alt="Image placeholder">
+                                        </div>
+                                        <div class="comment-body">
+                                            {#                                            {% if cmt.user_comment_id == user.id %}#}
+                                            <h3>{{ cmt.user_comment }}</h3>
+                                            {#                                            {% endif %}#}
+
+                                            <div class="meta">{{ cmt.date_comment.day }} - {{ cmt.date_comment.month }}
+                                                - {{ cmt.date_comment.year }}
+                                                at {{ cmt.date_comment.hour }}:{{ cmt.date_comment.minute }}</div>
+                                            <p>{{ cmt.body_comment }}</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            {% endfor %}
+                        {% endif %}
+                        <!-- END comment-list -->
+                        {% if not request.user.is_authenticated %}
+                            <h4>Nút đăng nhập <a href="{% url "login_view" %}">ở đây</a> ,hãy đăng nhập để comment</h4>
+                        {% else %}
+                            {% load admin_urls %}
+                            <div class="comment-form-wrap pt-5">
+                                <h3 class="mb-5" style="font-size: 20px; font-weight: bold;">Leave a comment</h3>
+                                <form action="{% url 'add_Comment' blog.id user.id %}" class="p-5 bg-light" method="post">
+                                    {% csrf_token %}
+
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea name="body_comment" id="message" cols="30" rows="10"
+                                                  class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                                    </div>
+                                </form>
+                            </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- .section -->
+
+
+
+{% endblock %}
